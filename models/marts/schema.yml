@@ -1,0 +1,27 @@
+version: 2
+models:
+- name: fct_orders
+  description: The 'fct_orders' model consolidates order information, transforming
+    and preparing it for analysis by determining fulfillment status for each order.
+    It serves to facilitate understanding of order patterns and fulfillment performance.
+  columns:
+  - name: order_key
+    description: A unique identifier for each order, allowing for precise tracking
+      and referencing.
+  - name: customer_key
+    description: A unique identifier associated with each customer, used to link orders
+      to customer records.
+  - name: order_status
+    description: A code representing the current status of the order, such as 'F'
+      for fulfilled.
+  - name: total_price
+    description: The total monetary value of the order, calculated as the sum of all
+      line items.
+  - name: order_date
+    description: The date on which the order was placed, used for time-based analysis.
+  - name: order_priority
+    description: A classification of the order's importance or urgency, used to prioritize
+      processing.
+  - name: is_fulfilled
+    description: A boolean indicator that signifies whether the order has been fulfilled,
+      derived from the order status.

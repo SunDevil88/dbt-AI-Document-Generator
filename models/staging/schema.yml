@@ -1,0 +1,23 @@
+version: 2
+models:
+- name: stg_orders
+  description: The 'stg_orders' model transforms raw order data by renaming and preparing
+    it for analytical use, allowing the business to analyze and track customer orders
+    efficiently.
+  columns:
+  - name: order_key
+    description: A unique identifier for each order in the dataset.
+  - name: customer_key
+    description: A foreign key linking each order to the corresponding customer.
+  - name: order_status
+    description: The current status of the order, indicating its progress in the fulfillment
+      process.
+  - name: total_price
+    description: The total monetary value of the order, including all line items and
+      discounts.
+  - name: order_date
+    description: The date on which the order was placed, used for tracking and time-based
+      analysis.
+  - name: order_priority
+    description: An indicator of the urgency or importance level assigned to the order,
+      impacting processing and delivery.
